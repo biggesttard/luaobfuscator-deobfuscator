@@ -1,0 +1,42 @@
+{
+  "detection": {
+    "matched": true,
+    "family": "luaobfuscator-chaotic-evil",
+    "candidate": "luaobfuscator-chaotic-evil",
+    "valid": true,
+    "reason": null,
+    "version": null,
+    "score": 4,
+    "signals": [
+      "lol_bytecode",
+      "opcode_unpack",
+      "xor_fn:v7",
+      "xor_decrypt"
+    ],
+    "lol": {
+      "fn": "v7",
+      "preview": "LOL!033O0003053O0068652O"
+    },
+    "opcodes": {
+      "unpack": true,
+      "tree": false,
+      "loop": false,
+      "ldexp": false,
+      "wrap": false
+    },
+    "format": null
+  },
+  "vm": {
+    "opcodeCount": 0,
+    "closureLocalOp": null,
+    "usedMap": {
+      "11": "LOADK",
+      "17": "JMP",
+      "23": "UNKNOWN",
+      "27": "EQ"
+    },
+    "nameToOpcodes": {}
+  },
+  "lua": "-- oh my days deobfuscated this obfuscator with this special deobfuscator so insane\n\nlocal function main()\n  local function main_f0(r0, r1, r2)\n    ::L1::\n    goto L1\n  end\nend\n\nreturn main()\n",
+  "disasm": ".proto main params=0\n.constants 1=\"hello\", 2=0, 3=1.5\n[  1] LOADK      A=4 B=\"hello\" C=null\n[  2] CLOSURE    A=9 B=0 C=2 upvals=[]\n  .proto main_f0 params=3\n  .constants 1=7, 2=nil, 3=\"..\"\n  [  1] UNKNOWN    A=3 B=1 C=8\n  [  2] JMP        A=9 B=-5 C=null"
+}

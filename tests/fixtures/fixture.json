@@ -1,0 +1,154 @@
+{
+  "closureLocalOp": 17,
+  "opcodeMap": {
+    "10": {
+      "name": "LOADK",
+      "body": ""
+    },
+    "11": {
+      "name": "GETGLOBAL",
+      "body": ""
+    },
+    "12": {
+      "name": "CALL",
+      "body": ""
+    },
+    "13": {
+      "name": "RETURN",
+      "body": ""
+    },
+    "14": {
+      "name": "CLOSURE",
+      "body": ""
+    },
+    "16": {
+      "name": "NEWTABLE",
+      "body": ""
+    },
+    "17": {
+      "name": "MOVE",
+      "body": ""
+    },
+    "19": {
+      "name": "SETTABLE",
+      "body": ""
+    }
+  },
+  "root": {
+    "params": 0,
+    "constants": [
+      null,
+      "print",
+      "hello",
+      2,
+      true
+    ],
+    "instructions": [
+      null,
+      {
+        "opcode": 10,
+        "A": 1,
+        "B": "print",
+        "C": null,
+        "mode": 1,
+        "isKB": true
+      },
+      {
+        "opcode": 10,
+        "A": 2,
+        "B": "hello",
+        "C": null,
+        "mode": 1,
+        "isKB": true
+      },
+      {
+        "opcode": 12,
+        "A": 1,
+        "B": 2,
+        "C": 1,
+        "mode": 0
+      },
+      {
+        "opcode": 10,
+        "A": 1,
+        "B": "t",
+        "C": null,
+        "mode": 1,
+        "isKB": true
+      },
+      {
+        "opcode": 16,
+        "A": 2,
+        "B": 0,
+        "C": 0,
+        "mode": 0
+      },
+      {
+        "opcode": 10,
+        "A": 3,
+        "B": 2,
+        "C": null,
+        "mode": 1,
+        "isKB": true
+      },
+      {
+        "opcode": 19,
+        "A": 2,
+        "B": 1,
+        "C": 3,
+        "mode": 0,
+        "isKB": true
+      },
+      {
+        "opcode": 14,
+        "A": 4,
+        "B": 0,
+        "C": 1,
+        "mode": 3
+      },
+      {
+        "opcode": 17,
+        "A": 5,
+        "B": 0,
+        "C": 0,
+        "mode": 0
+      },
+      {
+        "opcode": 13,
+        "A": 0,
+        "B": 0,
+        "C": 1,
+        "mode": 0
+      }
+    ],
+    "prototypes": [
+      {
+        "params": 1,
+        "constants": [
+          null,
+          "x"
+        ],
+        "instructions": [
+          null,
+          {
+            "opcode": 11,
+            "A": 0,
+            "B": "x",
+            "C": null,
+            "mode": 1,
+            "isKB": true
+          },
+          {
+            "opcode": 13,
+            "A": 0,
+            "B": 2,
+            "C": 1,
+            "mode": 0
+          }
+        ],
+        "prototypes": []
+      }
+    ]
+  },
+  "vmSource": "local function v40(v44, v73, v74)\n  local v79 = v44[1]\n  local v88 = {}\n  local v21 = unpack or table.unpack\n  local v5 = v44[2]\n  local v6 = 1\n  if (v1[1] == 7) then v3 = v2[3] end\n  while true do\n    local v1 = v5[v6]; v4 = v1[1]\n    v6 = v6 + 1\n    if (v4 <= 1) then\n      v3 = v2 .. 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa'\n    elseif (v4 <= 2) then\n      v3 = v2[3]\n    elseif (v4 == 3) then\n      v3 = {}\n    else\n      v3 = v2[3]\n    end\n  end\nend\n"
+}

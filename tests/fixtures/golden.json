@@ -1,0 +1,127 @@
+{
+  "disasm": ".proto main params=0\n.constants 1=\"print\", 2=\"hello\", 3=2, 4=true\n[  1] GETGLOBAL  A=1 B=\"print\" C=null\n[  2] GETGLOBAL  A=2 B=\"hello\" C=null\n[  3] CALL       A=1 B=2 C=1\n[  4] LOADK      A=1 B=\"t\" C=null\n[  5] NEWTABLE   A=2 B=0 C=0\n[  6] LOADK      A=3 B=2 C=null\n[  7] SETTABLE   A=2 B=1 C=3\n[  8] CLOSURE    A=4 B=0 C=1 upvals=[{\"isLocal\":true,\"idx\":0}]\n[ 10] CALL       A=0 B=0 C=1\n  .proto main_f0 params=1\n  .constants 1=\"x\"\n  [  1] GETGLOBAL  A=0 B=\"x\" C=null\n  [  2] RETURN     A=0 B=2 C=1",
+  "lifted": "function main()\n  function main_f0(r0)\n    r0 = _ENV[\"x\"]\n    return r0\n  end\n  r1 = _ENV[\"print\"]\n  r2 = _ENV[\"hello\"]\n  r1 = r1(r2)\n  r1 = \"t\"\n  r2 = {}\n  r3 = 2\n  r2[1] = r3\n  r4 = main_f0\n  r0 = r0(r1, ...)\nend\n\nreturn main()",
+  "reconstructed": "local function main()\n  r2 = {}\n  local function main_f0(r0)\n    return x\n  end\n  print(hello)\n  r2[1] = 2\nend\n\nreturn main()\n",
+  "cfg": {
+    "jmps": 0,
+    "removed": 0
+  },
+  "anVm": {
+    "dispatch": {
+      "instVar": "v1",
+      "codeVar": "v5",
+      "pcVar": "v6",
+      "opVar": "v4",
+      "fetchIndex": 208,
+      "start": 252,
+      "end": 1106
+    },
+    "ctx": {
+      "instVar": "v1",
+      "opVar": "v4",
+      "pcVar": "v6",
+      "codeVar": "v5",
+      "envVar": "v74",
+      "upValVar": "v73",
+      "stackVar": "v88",
+      "protoVar": "v5",
+      "wrapVar": "v40",
+      "topVar": "v83",
+      "unpackVar": "v21"
+    },
+    "opcodeMap": {
+      "0": {
+        "name": "CONCAT",
+        "body": "v3 = v2 .. 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+      },
+      "1": {
+        "name": "CONCAT",
+        "body": "v3 = v2 .. 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+      },
+      "2": {
+        "name": "JMP",
+        "body": "v3 = v2[3]"
+      },
+      "3": {
+        "name": "NEWTABLE",
+        "body": "v3 = {}"
+      },
+      "4": {
+        "name": "JMP",
+        "body": "v3 = v2[3]"
+      },
+      "5": {
+        "name": "JMP",
+        "body": "v3 = v2[3]"
+      },
+      "6": {
+        "name": "JMP",
+        "body": "v3 = v2[3]"
+      },
+      "7": {
+        "name": "JMP",
+        "body": "v3 = v2[3]"
+      },
+      "8": {
+        "name": "JMP",
+        "body": "v3 = v2[3]"
+      },
+      "9": {
+        "name": "JMP",
+        "body": "v3 = v2[3]"
+      },
+      "10": {
+        "name": "JMP",
+        "body": "v3 = v2[3]"
+      },
+      "11": {
+        "name": "JMP",
+        "body": "v3 = v2[3]"
+      }
+    },
+    "nameToOpcodes": {
+      "CONCAT": [
+        0,
+        1
+      ],
+      "JMP": [
+        2,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "NEWTABLE": [
+        3
+      ]
+    },
+    "closureLocalOp": 7,
+    "opcodeCount": 12
+  },
+  "io": {
+    "foldConst": [
+      "local a = 9",
+      "x = 1024 .. \"s\"",
+      "if true then v1 = 'a' end",
+      "6"
+    ],
+    "det": [
+      {
+        "matched": false,
+        "family": null,
+        "reason": "not_luaobfuscator",
+        "score": 0
+      },
+      {
+        "matched": false,
+        "family": null,
+        "reason": "not_luaobfuscator",
+        "score": 0
+      }
+    ]
+  }
+}

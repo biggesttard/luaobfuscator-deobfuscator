@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "deobf"
+version = "2.0.0"
+description = "Static deobfuscator for LuaObfuscator output (Chaotic Good, Chaotic Evil and Obfuscate v1)"
+readme = "README.md"
+requires-python = ">=3.9"
+license = "MIT"
+license-files = ["LICENSE"]
+keywords = ["lua", "luaobfuscator", "deobfuscator", "bytecode", "reverse-engineering"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Topic :: Security",
+    "Topic :: Software Development :: Disassemblers",
+]
+
+[project.scripts]
+deobf = "deobf.cli:main"
+
+[project.optional-dependencies]
+dev = ["pytest>=7"]
+
+[tool.setuptools]
+packages = ["deobf"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
